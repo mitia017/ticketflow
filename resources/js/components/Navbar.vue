@@ -4,21 +4,23 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <h1
-                        class="text-2xl font-bold text-primary-600 dark:text-primary-400"
+                        class="text-2xl font-bold bg-gradient-to-r from-blue-800 to-violet-800 dark:from-blue-400 dark:to-violet-400 bg-clip-text text-transparent transition-all duration-300 hover:drop-shadow-[0_0_8px_rgba(139,92,246,0.5)]"
                     >
                         TicketFlow
                     </h1>
                     <div class="text-sm ml-6 space-x-4">
                         <router-link
                             to="/dashboard"
-                            class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
-                            >Dashboard</router-link
+                            class="inline-block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-105 transform"
                         >
+                            Dashboard
+                        </router-link>
                         <router-link
                             to="/tickets"
-                            class="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
-                            >Tickets</router-link
+                            class="inline-block text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-200 hover:scale-105 transform"
                         >
+                            Tickets
+                        </router-link>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
