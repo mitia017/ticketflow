@@ -1,58 +1,94 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# TicketFlow - Système de Gestion de Tickets de Support
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+TicketFlow est une application moderne de gestion de tickets de support construite avec Laravel 13, Vue 3 et Tailwind CSS. Elle offre une interface intuitive pour suivre, gérer et résoudre les demandes d'assistance.
 
-## About Laravel
+## 🚀 Aperçu
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### 🔐 Connexion
+![Connexion](./public/screenshots/login.png)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 📊 Tableau de Bord
+![Tableau de Bord](./public/screenshots/dashboard.png)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### 🎫 Liste des Tickets
+![Liste des Tickets](./public/screenshots/tickets_list.png)
 
-## Learning Laravel
+### 📝 Détail d'un Ticket
+![Détail du Ticket](./public/screenshots/ticket_detail.png)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## ✨ Fonctionnalités Clés
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Gestion de Tickets** : Création, mise à jour et suivi du cycle de vie des tickets.
+- **Tableau de Bord Analytique** : Visualisation en temps réel des statistiques via Chart.js (Tickets par statut, volume quotidien).
+- **Système de Rôles** : Support multi-utilisateurs (Admin, Agent, Viewer).
+- **Commentaires en Direct** : Collaboration simplifiée sur chaque ticket.
+- **Design Adaptatif** : Interface soignée avec Tailwind CSS, supportant le mode sombre.
+- **Authentification Sécurisée** : Gestion via Laravel Sanctum.
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+## 🛠️ Stack Technique
 
-## Agentic Development
+- **Backend** : Laravel 13 (PHP 8.3+)
+- **Frontend** : Vue 3 (Composition API), Vite, Tailwind CSS
+- **Base de données** : SQLite (par défaut)
+- **Graphiques** : Chart.js
+- **Icônes** : Heroicons
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+## ⚙️ Installation
 
-```bash
-composer require laravel/boost --dev
+### Prérequis
+- PHP 8.3+
+- Composer
+- Node.js & NPM
 
-php artisan boost:install
-```
+### Étapes d'installation
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+1. **Cloner le projet**
+   ```bash
+   git clone <repository-url>
+   cd ticket-flow
+   ```
 
-## Contributing
+2. **Installer les dépendances PHP**
+   ```bash
+   composer install
+   ```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+3. **Installer les dépendances JavaScript**
+   ```bash
+   npm install
+   ```
 
-## Code of Conduct
+4. **Configurer l'environnement**
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+5. **Initialiser la base de données**
+   ```bash
+   touch database/database.sqlite
+   php artisan migrate --seed
+   ```
 
-## Security Vulnerabilities
+6. **Compiler les assets**
+   ```bash
+   npm run build
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+7. **Lancer le serveur**
+   ```bash
+   php artisan serve
+   ```
+   L'application sera accessible sur `http://localhost:8000`.
 
-## License
+## 🧪 Données de Test
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Pour explorer l'application, vous pouvez utiliser le compte administrateur suivant :
+
+- **Login** : `admin@demo.com`
+- **Mot de passe** : `password`
+
+D'autres comptes sont disponibles après le seeding (`agent1@demo.com`, `viewer@demo.com` avec le même mot de passe).
+
+---
+Développé avec ❤️ pour une gestion de support efficace.
